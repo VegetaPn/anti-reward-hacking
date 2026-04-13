@@ -16,7 +16,7 @@ These behaviors all have corresponding academic classifications in the article: 
 
 ## From "Understanding the Problem" to "Solving It"
 
-The article is analytical and descriptive, but I figured: since the problems have been so clearly decomposed, **why not turn them into an executable skill that Claude Code loads automatically in every session as behavioral constraints?**
+The article is analytical and descriptive, but I figured: since the problems have been so clearly decomposed, **why not turn them into an executable skill that users can activate with `/anti-reward-hacking` at the start of a Claude Code session?**
 
 So I distilled the article's content into a Claude Code skill called **`anti-reward-hacking`**.
 
@@ -60,7 +60,7 @@ So the skill includes two dedicated mechanisms:
 
 ## How to Use
 
-Place the skill in your project's `.claude/skills/anti-reward-hacking/` directory. Claude Code will automatically detect and load it during work.
+Place the skill in your project's `.claude/skills/anti-reward-hacking/` directory, then type `/anti-reward-hacking` at the start of a session to activate it.
 
 The skill is a single `SKILL.md` file (~200 lines), under 5000 tokens — minimal context window impact.
 
@@ -72,7 +72,7 @@ You can also download the packaged `.skill` file to install directly.
 
 Thanks to Jiacai Liu for the original article — systematically extracting reward hacking content scattered across 13 model cards is genuinely valuable work. This skill is my practical response after reading it: **since Anthropic invested heavily in identifying and suppressing these behaviors, we as users can do the same thing at the prompt/skill level.**
 
-The model's reward hacking tendencies won't completely disappear, but by loading an explicit set of behavioral constraints in every session, we can at least add one more layer of self-checking when it's tempted to take shortcuts.
+The model's reward hacking tendencies won't completely disappear, but by invoking `/anti-reward-hacking` to load an explicit set of behavioral constraints, we can at least add one more layer of self-checking when it's tempted to take shortcuts.
 
 ---
 

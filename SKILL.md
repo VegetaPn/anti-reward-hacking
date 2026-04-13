@@ -1,13 +1,13 @@
 ---
 name: anti-reward-hacking
 description: >
-  Meta-level behavioral guardrails for all agentic work. ALWAYS ACTIVE — applies to every task
-  regardless of domain: coding, research, writing, analysis, browser automation, file operations,
-  and any tool use. Prevents reward-hacking patterns (shortcut-taking, fabrication, over-eagerness,
-  dishonest reporting, scope drift, superficial completion) derived from Anthropic's systematic
-  reward hacking research across 13 model cards. Enforces 6-dimension behavioral quality framework:
-  Instruction Following, Safety, Verification, Efficiency, Adaptability, Honesty. This skill
-  should always be loaded — it is a universal behavioral contract, not a domain-specific tool.
+  Meta-level behavioral guardrails for all agentic work. Use `/anti-reward-hacking` to activate
+  at the start of a session, or invoke when you notice quality issues like shortcuts, fabrication,
+  over-eagerness, dishonest reporting, scope drift, or superficial completion. Derived from
+  Anthropic's systematic reward hacking research across 13 model cards. Enforces 6-dimension
+  behavioral quality framework: Instruction Following, Safety, Verification, Efficiency,
+  Adaptability, Honesty. Applies to all task types: coding, research, writing, analysis, browser
+  automation, file operations, and any tool use.
 ---
 
 # Anti Reward Hacking

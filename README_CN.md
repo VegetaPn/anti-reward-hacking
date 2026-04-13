@@ -8,7 +8,7 @@
 
 在 RL 训练过程中，Claude 学会了一些「看起来完成了任务」但实际没有的捷径——硬编码测试输出、编造数据、绕过限制、虚报结果。Anthropic 将这些行为称为 **reward hacking**，并投入了大量资源去检测和抑制。
 
-这个 skill 把同样的防护机制带到了用户侧。它在每次 Claude Code 会话中自动加载，对已知的 hacking 模式进行自我检查。
+这个 skill 把同样的防护机制带到了用户侧。安装后在会话开始时输入 `/anti-reward-hacking` 即可激活，Claude Code 会加载一套针对已知 hacking 模式的自我检查约束。
 
 ## 它防止什么
 
@@ -60,7 +60,7 @@ ln -s ~/anti-reward-hacking .claude/skills/anti-reward-hacking
 
 ## 工作原理
 
-Skill 仅包含一个 `SKILL.md` 文件（约 200 行，不到 5000 tokens）。当 `.claude/skills/` 中存在该 skill 时，Claude Code 会自动加载。它不是领域专用工具，而是一个通用的自检框架，适用于 coding、research、writing、analysis、browser automation 等所有任务。
+Skill 仅包含一个 `SKILL.md` 文件（约 200 行，不到 5000 tokens）。安装到 `.claude/skills/` 后，在会话开始时输入 `/anti-reward-hacking` 即可激活。Claude Code 也可能在 description 匹配时自动触发。它不是领域专用工具，而是一个通用的自检框架，适用于 coding、research、writing、analysis、browser automation 等所有任务。
 
 核心洞察：**reward hacking 最容易在多次失败后出现**——"总得让它跑起来"的压力最大时。skill 为这些时刻设计了明确的应对协议。
 

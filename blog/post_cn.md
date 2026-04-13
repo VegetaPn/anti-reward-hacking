@@ -16,7 +16,7 @@
 
 ## 从「了解问题」到「解决问题」
 
-文章本身是分析和总结性的，但我觉得既然问题已经被这么清晰地拆解了，**不如直接做成一个可执行的 skill，让 Claude Code 在每次工作时都自动加载这套行为约束。**
+文章本身是分析和总结性的，但我觉得既然问题已经被这么清晰地拆解了，**不如直接做成一个可执行的 skill，让用户在 Claude Code 会话开始时通过 `/anti-reward-hacking` 一键加载这套行为约束。**
 
 于是我基于文章内容，提炼了一个名为 **`anti-reward-hacking`** 的 Claude Code skill。
 
@@ -60,7 +60,7 @@
 
 ## 怎么用
 
-把 skill 放到你项目的 `.claude/skills/anti-reward-hacking/` 目录下即可。Claude Code 会自动识别并在工作时加载。
+把 skill 放到你项目的 `.claude/skills/anti-reward-hacking/` 目录下，然后在会话开始时输入 `/anti-reward-hacking` 即可激活。
 
 skill 文件只有一个 `SKILL.md`（200 行），不到 5000 tokens，对上下文窗口的占用很小。
 
@@ -72,7 +72,7 @@ GitHub 链接：[https://github.com/VegetaPn/anti-reward-hacking](https://github
 
 感谢 @Jiacai Liu 的原文——把 13 个 model card 里散落的 reward hacking 内容系统整理出来，是一件非常有价值的工作。这个 skill 算是我读完之后的一个实践性回应：**既然 Anthropic 花了大量精力去识别和压制这些行为，那我们作为用户，也可以在 prompt/skill 层面做同样的事。**
 
-模型的 reward hacking 倾向不会完全消失，但通过在每次会话中加载一套明确的行为约束，至少可以让它在"想走捷径"的时候多一层自我检查。
+模型的 reward hacking 倾向不会完全消失，但通过在会话开始时 `/anti-reward-hacking` 加载一套明确的行为约束，至少可以让它在"想走捷径"的时候多一层自我检查。
 
 ---
 

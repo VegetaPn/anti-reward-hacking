@@ -8,7 +8,7 @@ A meta-level behavioral guardrail skill for [Claude Code](https://docs.anthropic
 
 During RL training, Claude learns shortcuts that *look like* task completion but aren't — hard-coding test outputs, fabricating data, bypassing restrictions, reporting false results. Anthropic calls these **reward hacking** behaviors and has invested heavily in detecting and suppressing them.
 
-This skill brings those same guardrails to the user side. It loads automatically in every Claude Code session and enforces self-checks against known hacking patterns.
+This skill brings those same guardrails to the user side. Invoke it with `/anti-reward-hacking` at the start of a session (or whenever you notice quality degradation) to load behavioral self-checks against known hacking patterns.
 
 ## What it prevents
 
@@ -60,7 +60,7 @@ Download `anti-reward-hacking.skill` from [Releases](https://github.com/VegetaPn
 
 ## How it works
 
-The skill is a single `SKILL.md` file (~200 lines, <5000 tokens). Claude Code automatically loads it when the skill is present in `.claude/skills/`. It acts as a persistent behavioral contract — not a domain-specific tool, but a universal self-check framework that applies to coding, research, writing, analysis, browser automation, and any other task.
+The skill is a single `SKILL.md` file (~200 lines, <5000 tokens). After installation, invoke it with `/anti-reward-hacking` at the start of a session to activate the behavioral constraints. Claude Code may also trigger it automatically when its description matches your request. It acts as a universal self-check framework that applies to coding, research, writing, analysis, browser automation, and any other task.
 
 The key insight: **reward hacking is most likely to emerge after multiple failed attempts**, when the pressure to "just make it work" is highest. The skill includes explicit protocols for these moments.
 
