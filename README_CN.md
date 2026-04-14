@@ -34,29 +34,23 @@
 
 ## 安装
 
-### 方式一：复制到项目中
+**推荐：一行命令**
 
 ```bash
-# 创建 skill 目录
-mkdir -p .claude/skills/anti-reward-hacking
+npx skills add VegetaPn/anti-reward-hacking
+```
 
-# 复制 SKILL.md
+**其他方式：**
+
+```bash
+# 克隆 + 软链接（跨项目共享）
+git clone https://github.com/VegetaPn/anti-reward-hacking.git ~/anti-reward-hacking
+ln -s ~/anti-reward-hacking .claude/skills/anti-reward-hacking
+
+# 或者直接复制 SKILL.md
+mkdir -p .claude/skills/anti-reward-hacking
 cp path/to/anti-reward-hacking/SKILL.md .claude/skills/anti-reward-hacking/
 ```
-
-### 方式二：软链接（跨项目共享）
-
-```bash
-# 克隆一次
-git clone https://github.com/VegetaPn/anti-reward-hacking.git ~/anti-reward-hacking
-
-# 在每个项目中创建软链接
-ln -s ~/anti-reward-hacking .claude/skills/anti-reward-hacking
-```
-
-### 方式三：安装 .skill 包
-
-从 [Releases](https://github.com/VegetaPn/anti-reward-hacking/releases) 下载 `anti-reward-hacking.skill`，通过 Claude Code 的 skill installer 安装。
 
 ## 工作原理
 

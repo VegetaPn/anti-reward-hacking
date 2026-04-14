@@ -60,13 +60,15 @@ So the skill includes two dedicated mechanisms:
 
 ## How to Use
 
-Place the skill in your project's `.claude/skills/anti-reward-hacking/` directory, then type `/anti-reward-hacking` at the start of a session to activate it.
+```bash
+npx skills add VegetaPn/anti-reward-hacking
+```
+
+Then type `/anti-reward-hacking` at the start of a session to activate it.
 
 The skill is a single `SKILL.md` file (~200 lines), under 5000 tokens — minimal context window impact.
 
 GitHub: [https://github.com/VegetaPn/anti-reward-hacking](https://github.com/VegetaPn/anti-reward-hacking)
-
-You can also download the packaged `.skill` file to install directly.
 
 ## Final Thoughts
 

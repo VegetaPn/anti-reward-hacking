@@ -60,13 +60,15 @@
 
 ## 怎么用
 
-把 skill 放到你项目的 `.claude/skills/anti-reward-hacking/` 目录下，然后在会话开始时输入 `/anti-reward-hacking` 即可激活。
+```bash
+npx skills add VegetaPn/anti-reward-hacking
+```
+
+安装后在会话开始时输入 `/anti-reward-hacking` 即可激活。
 
 skill 文件只有一个 `SKILL.md`（200 行），不到 5000 tokens，对上下文窗口的占用很小。
 
 GitHub 链接：[https://github.com/VegetaPn/anti-reward-hacking](https://github.com/VegetaPn/anti-reward-hacking)
-
-也可以直接下载打包好的 `.skill` 文件安装。
 
 ## 最后
 

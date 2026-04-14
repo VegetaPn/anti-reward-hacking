@@ -34,29 +34,23 @@ Based on Anthropic's **Agentic Code Behavior Scores** (introduced in the 4.6 mod
 
 ## Installation
 
-### Option 1: Copy into your project
+**Recommended: one command**
 
 ```bash
-# Create the skill directory in your project
-mkdir -p .claude/skills/anti-reward-hacking
+npx skills add VegetaPn/anti-reward-hacking
+```
 
-# Copy SKILL.md
+**Other options:**
+
+```bash
+# Clone + symlink (shared across projects)
+git clone https://github.com/VegetaPn/anti-reward-hacking.git ~/anti-reward-hacking
+ln -s ~/anti-reward-hacking .claude/skills/anti-reward-hacking
+
+# Or just copy SKILL.md
+mkdir -p .claude/skills/anti-reward-hacking
 cp path/to/anti-reward-hacking/SKILL.md .claude/skills/anti-reward-hacking/
 ```
-
-### Option 2: Symlink (shared across projects)
-
-```bash
-# Clone once
-git clone https://github.com/VegetaPn/anti-reward-hacking.git ~/anti-reward-hacking
-
-# Symlink into each project
-ln -s ~/anti-reward-hacking .claude/skills/anti-reward-hacking
-```
-
-### Option 3: Install the .skill package
-
-Download `anti-reward-hacking.skill` from [Releases](https://github.com/VegetaPn/anti-reward-hacking/releases) and install it via Claude Code's skill installer.
 
 ## How it works
 
